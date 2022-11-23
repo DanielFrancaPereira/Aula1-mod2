@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  
+    <title>Get element</title>
+</head>
+<body>
+    <div id="titulo">
+        <h1>
+            Sistema Brasileiro de Controle de Peixes </br>
+        </h1>
+        <h6>
+            HBCP
+        </h6>
+    </div>
+
+    <script>
+        qpp=0; mull=0; tee=0;
+        function peixe(){
+        var qpp = parseFloat (pesca.qp.value);
+            if (qpp>50){
+            tee = qpp -50;
+            mull = tee *4;
+            }
+            pesca.mul.value=mull;
+            pesca.te.value=tee;
+            pesca.tp.value=qpp;
+    }
+    </script>
+
+
+    <form name="pesca">
+                            Quant. Peixe:
+        <input type="text" class="form-control" name="qp" onchange="peixe()">
+            </br>           Multa:
+        <input type="text" class="form-control" name="mul" onchange="this.blur()">
+            </br>           Total pescado:
+        <input type="text" class="form-control" name="tm" onchange="this.blur()">
+        </br>               Total excedido:
+        <input type="text" class="form-control" name="te" onchange="this.blur()">
+        </br>       </br>    Valor da multa:
+        <input type="text" class="form-control" name="vm" onchange="this.blur()">
+        </br>       </br>    
+        <input type="submit" class="btn btn-primary" value="Enviar">
+        <input type="reset" class="btn btn-danger" value="Apagar">
+        
+
+
+    </form>
+
+
+
+    <style>
+        
+        #titulo{
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            width: 100%;
+            height: 4.55em;
+        }
+
+    </style>
+
+
+</body>
+</html>
